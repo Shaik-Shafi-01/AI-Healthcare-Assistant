@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Technology Blog</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+    <style> 
+    .blog-container{
+       width:90%; 
+       max-width:1000px;
+        margin:40px auto;
+   } 
+   .blog-header{
+     text-align:center; 
+     margin-bottom:30px; 
+    } 
+    .blog-header h1{
+       color:#2563eb; 
+       margin-bottom:10px;
+        font-size:2.5rem;
+   }
+   .blog-header p{
+     color:#666;
+      font-size:1.1rem;
+   }
+    .blog-card{
+       background:white;
+        padding:30px;
+         border-radius:15px; 
+         box-shadow:0 4px 12px rgba(0,0,0,0.1);
+          margin-bottom:20px;
+   }
+    .blog-card h2{
+       color:#2563eb; 
+       margin-bottom:15px;
+   }
+    .blog-card p, .blog-card li{
+       line-height:1.8;
+       color:#444;
+   }
+    .blog-card ul, .blog-card ol{ 
+      padding-left:25px;
+   }
+ </style>
+</head>
+
+<body>
+  <nav class="navbar">
+<div class="logo-section">
+    <img class="logo"
+         src="{{ url_for('static', filename='logo.png') }}"
+         alt="AI Healthcare Assistant Logo">
+
+    <h2>AI Healthcare Assistant</h2>
+</div>
+
+<div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+    <a href="/team">Team</a>
+    <a href="/blog">Blog</a>
+</div>
+</nav>
+<div class="blog-container">
+<div class="blog-header">
+    <h1>AI in Modern Healthcare</h1>
+    <p>
+        How Machine Learning is Transforming Disease Prediction
+        and Healthcare Assistance
+    </p>
+</div>
+
+<div class="blog-card">
+    <h2>Introduction</h2>
+    <p>
+        Artificial Intelligence is rapidly transforming the healthcare industry.
+        From disease prediction to personalized treatment recommendations,
+        machine learning helps healthcare systems provide faster and more
+        accurate support to patients.
+    </p>
+</div>
+
+<div class="blog-card">
+    <h2>How AI Healthcare Assistant Works</h2>
+
+    <ol>
+        <li>Users enter symptoms through the web interface.</li>
+        <li>The machine learning model analyzes the symptoms.</li>
+        <li>The system predicts the most likely disease.</li>
+        <li>
+            Additional recommendations such as medications,
+            precautions, diet plans, and workout suggestions are provided.
+        </li>
+    </ol>
+</div>
+
+<div class="blog-card">
+    <h2>Key Features</h2>
+
+    <ul>
+        <li>Disease Prediction using Machine Learning.</li>
+        <li>Symptom-Based Health Analysis.</li>
+        <li>Medication Recommendations.</li>
+        <li>Dietary Suggestions.</li>
+        <li>Workout and Wellness Guidance.</li>
+        <li>Simple and User-Friendly Interface.</li>
+    </ul>
+</div>
+
+<div class="blog-card">
+    <h2>Benefits of AI in Healthcare</h2>
+
+    <p>
+        AI-powered healthcare solutions can assist users by providing
+        quick access to health information, reducing the time needed
+        for preliminary assessments, and improving awareness about
+        potential health conditions.
+    </p>
+</div>
+
+<div class="blog-card">
+    <h2>Future Scope</h2>
+
+    <p>
+        Future improvements may include chatbot integration,
+        voice-based symptom analysis, wearable device support,
+        telemedicine features, and advanced predictive healthcare analytics.
+    </p>
+</div>
+</div>
+
+<footer class="footer">
+    © 2026 AI Healthcare Assistant | Machine Learning Powered Healthcare Platform
+</footer>
+
+</body>
+</html>

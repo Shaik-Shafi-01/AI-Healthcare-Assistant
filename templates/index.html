@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Healthcare Assistant</title>
+
+    <link rel="icon"
+          type="image/png"
+          href="{{ url_for('static', filename='logo.png') }}">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="logo-section">
+        <img class="logo"
+            src="{{ url_for('static', filename='logo.png') }}"
+            alt="AI Healthcare Assistant Logo">
+        <h2>AI Healthcare Assistant</h2>
+    </div>
+
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+        <a href="/team">Team</a>
+        <a href="/blog">Blog</a>
+    </div>
+
+</nav>
+
+<section class="hero">
+
+    <img src="{{ url_for('static', filename='logo.png') }}"
+     alt="AI Healthcare Assistant">
+
+    <h1>🩺 AI Healthcare Assistant</h1>
+
+    <p>
+        Predict diseases based on symptoms using Machine Learning
+    </p>
+
+</section>
+
+<div class="form-container">
+
+<form action="/predict" method="post">
+
+    <label>Enter Symptoms</label>
+
+    <label>Enter Symptoms</label>
+
+<input
+    list="symptomList"
+    id="symptoms"
+    name="symptoms"
+    class="input-field"
+    placeholder="Search symptom...">
+
+<datalist id="symptomList">
+    {% for symptom in symptoms %}
+    <option value="{{ symptom }}">
+    {% endfor %}
+</datalist>
+
+    <button
+        type="button"
+        id="startSpeechRecognition"
+        class="voice-btn">
+        🎤 Voice Input
+    </button>
+
+    <div id="transcription"></div>
+
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+
+    <button
+        type="submit"
+        class="predict-btn">
+        🔍 Analyze Symptoms
+    </button>
+
+</form>
+
+</div>
+{% if predicted_disease %}
+
+<h2 style="text-align:center;margin-top:30px;">
+    Prediction Results
+</h2>
+
+<div class="result-grid">
+
+    <div class="result-card">
+        <h3>Disease</h3>
+        <p>{{ predicted_disease }}</p>
+    </div>
+
+    <div class="result-card">
+        <h3>Description</h3>
+        <p>{{ dis_des }}</p>
+    </div>
+
+    <div class="result-card">
+        <h3>Precautions</h3>
+        <ul>
+            {% for i in my_precautions %}
+            <li>{{ i }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="result-card">
+        <h3>Medications</h3>
+        <ul>
+            {% for i in medications %}
+            <li>{{ i }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="result-card">
+        <h3>Workouts</h3>
+        <ul>
+            {% for i in workout %}
+            <li>{{ i }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="result-card">
+        <h3>Diet Plans</h3>
+        <ul>
+            {% for i in my_diet %}
+            <li>{{ i }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+</div>
+
+{% endif %}
+
+ <footer class="footer">
+    © 2026 AI Healthcare Assistant | Machine Learning Powered Healthcare Platform
+</footer>
+</body>
+</html>

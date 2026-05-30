@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team | AI Healthcare Assistant</title>
+
+```
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}">
+
+<style>
+    .team-container{
+        width:90%;
+        max-width:1000px;
+        margin:40px auto;
+    }
+
+    .team-header{
+        text-align:center;
+        margin-bottom:30px;
+    }
+
+    .team-header h1{
+        color:#2563eb;
+        margin-bottom:10px;
+        font-size:2.5rem;
+    }
+
+    .team-header p{
+        color:#666;
+        font-size:1.1rem;
+    }
+
+    .team-card{
+        background:white;
+        padding:30px;
+        border-radius:15px;
+        box-shadow:0 4px 12px rgba(0,0,0,0.1);
+        margin-bottom:20px;
+    }
+
+    .team-card h2{
+        color:#2563eb;
+        margin-bottom:15px;
+    }
+
+    .team-card p{
+        line-height:1.8;
+        color:#444;
+    }
+
+    .skills{
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+        gap:15px;
+        margin-top:15px;
+    }
+
+    .skill-box{
+        background:#f4f7fc;
+        padding:15px;
+        border-radius:10px;
+        text-align:center;
+        font-weight:bold;
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+```
+<div class="logo-section">
+    <img class="logo"
+         src="{{ url_for('static', filename='logo.png') }}"
+         alt="AI Healthcare Assistant Logo">
+
+    <h2>AI Healthcare Assistant</h2>
+</div>
+
+<div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+    <a href="/team">Team</a>
+    <a href="/blog">Blog</a>
+</div>
+```
+
+</nav>
+
+<div class="team-container">
+
+```
+<div class="team-header">
+    <h1>Project Team</h1>
+    <p>Meet the developer behind AI Healthcare Assistant</p>
+</div>
+
+<div class="team-card">
+    <h2>Developer</h2>
+    <p>
+        <strong>Shaik Shafi</strong> is a Computer Science Engineering student
+        with interests in Artificial Intelligence, Machine Learning,
+        Cloud Computing, Web Development, and Software Engineering.
+    </p>
+</div>
+
+<div class="team-card">
+    <h2>Project Overview</h2>
+    <p>
+        AI Healthcare Assistant is a machine learning-powered healthcare
+        recommendation platform that predicts diseases based on symptoms.
+        The system also provides disease descriptions, medications,
+        precautions, dietary recommendations, and workout suggestions.
+    </p>
+</div>
+
+<div class="team-card">
+    <h2>Technologies Used</h2>
+
+    <div class="skills">
+        <div class="skill-box">Python</div>
+        <div class="skill-box">Flask</div>
+        <div class="skill-box">Machine Learning</div>
+        <div class="skill-box">HTML</div>
+        <div class="skill-box">CSS</div>
+        <div class="skill-box">Pandas</div>
+        <div class="skill-box">NumPy</div>
+        <div class="skill-box">Scikit-Learn</div>
+    </div>
+</div>
+
+<div class="team-card">
+    <h2>Project Objectives</h2>
+    <p>
+        The goal of this project is to provide users with an easy-to-use
+        healthcare support platform that leverages machine learning to
+        assist in preliminary disease prediction and health awareness.
+    </p>
+</div>
+
+<div class="team-card">
+    <h2>Future Enhancements</h2>
+    <p>
+        Future versions of the project may include AI chatbot integration,
+        voice-based symptom analysis, wearable device connectivity,
+        online doctor consultation support, and advanced healthcare analytics.
+    </p>
+</div>
+```
+
+</div>
+
+<footer class="footer">
+    © 2026 AI Healthcare Assistant | Machine Learning Powered Healthcare Platform
+</footer>
+
+</body>
+</html>
